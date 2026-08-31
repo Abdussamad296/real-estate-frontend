@@ -1,0 +1,45 @@
+/* ============================================
+   GLOBAL VARIABLES
+   Yeh file ek hi baar apne app ke entry point
+   (main.jsx ya index.js) mein import karo:
+
+   import "./styles/global.css";
+   ============================================ */
+
+:root {
+    --blue-700: #1d4ed8;
+    --blue-600: #2563eb;
+    --blue-500: #3b82f6;
+    --blue-50:  #eff6ff;
+
+    --slate-900: #0f172a;
+    --slate-700: #334155;
+    --slate-500: #64748b;
+    --slate-200: #e2e8f0;
+    --slate-50:  #f8fafc;
+    --white: #ffffff;
+
+    --danger-50: #fef2f2;
+    --danger-600: #dc2626;
+
+    --radius-md: 10px;
+    --radius-sm: 8px;
+}
+
+/* NOTE: yahan jaan-boojh kar :root pe font / color / background
+   nahi diya. Wo blog-template wala part tha jo poori site ka
+   font aur color badal raha tha — usko hata diya hai.
+   Har page/component apna font-family khud decide karega. */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#root {
+    width: 100%;
+    min-height: 100svh;
+}

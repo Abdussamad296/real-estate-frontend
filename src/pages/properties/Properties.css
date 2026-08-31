@@ -1,0 +1,202 @@
+.properties-page {
+    min-height: 100vh;
+    padding: 40px 6%;
+    background: var(--slate-50);
+}
+
+.properties-header {
+    margin-bottom: 30px;
+}
+
+.properties-header span {
+    color: var(--blue-700);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.properties-header h1 {
+    margin: 8px 0;
+    color: var(--slate-900);
+    font-size: 36px;
+}
+
+.properties-header p {
+    margin: 0;
+    color: var(--slate-500);
+}
+
+.property-filters {
+    padding: 18px;
+    margin-bottom: 35px;
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-md);
+}
+
+.property-filters form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    gap: 12px;
+}
+
+.property-filters input,
+.property-filters select {
+    width: 100%;
+    height: 44px;
+    padding: 0 13px;
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-sm);
+    outline: none;
+    background: var(--slate-50);
+}
+
+.property-filters input:focus,
+.property-filters select:focus {
+    border-color: var(--blue-500);
+}
+
+.property-filters button {
+    padding: 0 22px;
+    border: 0;
+    border-radius: var(--radius-sm);
+    background: var(--blue-700);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.property-filters button:hover {
+    background: var(--blue-600);
+}
+
+.properties-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.properties-top h2 {
+    margin: 0;
+    color: var(--slate-900);
+    font-size: 22px;
+}
+
+.properties-top span {
+    color: var(--slate-500);
+    font-size: 14px;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.property-card {
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-md);
+    transition: 0.2s;
+}
+
+.property-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+}
+
+.property-image {
+    position: relative;
+    height: 220px;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-image span {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: white;
+    color: var(--blue-700);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.property-content {
+    padding: 18px;
+}
+
+.property-content h3 {
+    margin: 0 0 7px;
+    color: var(--slate-900);
+    font-size: 17px;
+}
+
+.property-location {
+    margin: 0 0 12px;
+    color: var(--slate-500);
+    font-size: 13px;
+}
+
+.property-content strong {
+    color: var(--blue-700);
+    font-size: 20px;
+}
+
+.property-details {
+    display: flex;
+    gap: 14px;
+    margin-top: 15px;
+    padding-top: 13px;
+    border-top: 1px solid var(--slate-200);
+    color: var(--slate-500);
+    font-size: 12px;
+}
+
+.property-message {
+    padding: 40px;
+    text-align: center;
+    color: var(--slate-500);
+}
+
+.property-message.error {
+    color: var(--danger-600);
+}
+
+@media (max-width: 1000px) {
+    .property-filters form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .properties-page {
+        padding: 25px 18px;
+    }
+
+    .properties-header h1 {
+        font-size: 28px;
+    }
+
+    .property-filters form,
+    .property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .property-filters button {
+        height: 44px;
+    }
+}
